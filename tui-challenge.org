@@ -6,15 +6,15 @@ Starting off with the juicy bits, my total score is 100 points. There's some ast
 | Day   | Task                  | Base Points | Completed (Y/N) | Bonus Points | Penalty Applied (Y/N) | Final Score |
 |-------+-----------------------+-------------+-----------------+--------------+-----------------------+-------------|
 | Day 1 | Text Editing          |          10 | Y               |           15 | N                     |          25 |
-| Day 2 | Email Management      |          20 | N               |            0 | Y                     |         -20 |
+| Day 2 | Email Management      |           0 | N               |            0 | Y                     |         -20 |
 | Day 3 | Web Browsing          |          20 | Y / N*          |            0 | Y                     |           0 |
 | Day 4 | Music Playback        |          10 | Y*              |           10 | N                     |          20 |
 | Day 5 | File Management       |          10 | Y               |            0 | N                     |          10 |
 | Day 6 | Task Management       |          20 | Y*              |            0 | N                     |          20 |
 | Day 7 | System Monitoring     |          10 | Y               |            5 | N                     |          15 |
 | Bonus | Terminal Multitasking |          30 | Y               |            0 | N                     |          30 |
-|       | **TOTAL**             |     **170** |                 |           30 |                       |         100 |
-#+TBLFM: $7=@9$3+@9$5
+|       | **TOTAL**             |         110 |                 |           30 | -40                   |         100 |
+#+TBLFM: $6=-20-20::$7=@9$3+@9$5
 
 * Background
 I loved this challenge! The biggest thing is that it forced me to spend an afternoon learning tmux, which I'm not addicted to and will do as my daily terminal setup. I haven't changed the desktop environment on my laptop (KDE), but I've been trying to launch tmux with kitty and running it in fullscreen. So at least it looks like it's a TUI only setup (even though KDE is just and M-tab away).
