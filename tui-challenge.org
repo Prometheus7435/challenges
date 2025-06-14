@@ -1,0 +1,45 @@
+These are the results and thoughts of my attempt to the [[https://github.com/JupiterBroadcasting/linux-unplugged/blob/main/challenges/TUI-Challenge.md][Jupiter Broadcasting Tui Challenge]].
+
+* Scoring
+Starting off with the juicy bits, my total score is 100 points. There's some asterisks as while I "technically" met scoring criteria, it either wasn't practicable or something I do regularly.
+
+| Day   | Task                  | Base Points | Completed (Y/N) | Bonus Points | Penalty Applied (Y/N) | Final Score |
+|-------+-----------------------+-------------+-----------------+--------------+-----------------------+-------------|
+| Day 1 | Text Editing          |          10 | Y               |           15 | N                     |          25 |
+| Day 2 | Email Management      |          20 | N               |            0 | Y                     |         -20 |
+| Day 3 | Web Browsing          |          20 | Y / N*          |            0 | Y                     |           0 |
+| Day 4 | Music Playback        |          10 | Y*              |           10 | N                     |          20 |
+| Day 5 | File Management       |          10 | Y               |            0 | N                     |          10 |
+| Day 6 | Task Management       |          20 | Y*              |            0 | N                     |          20 |
+| Day 7 | System Monitoring     |          10 | Y               |            5 | N                     |          15 |
+| Bonus | Terminal Multitasking |          30 | Y               |            0 | N                     |          30 |
+|       | **TOTAL**             |     **170** |                 |           30 |                       |         100 |
+#+TBLFM: $7=@9$3+@9$5
+
+* Background
+I loved this challenge! The biggest thing is that it forced me to spend an afternoon learning tmux, which I'm not addicted to and will do as my daily terminal setup. I haven't changed the desktop environment on my laptop (KDE), but I've been trying to launch tmux with kitty and running it in fullscreen. So at least it looks like it's a TUI only setup (even though KDE is just and M-tab away).
+
+** Text Editing
+This was the easiest for me, as in college I decided that I had but one life to learn a text editor. And between Vim and Emacs, I chose the later. Naturally, that's what I used for this challenge, doing so with this writeup. Utilizing org-mode to help organize my thoughts, and calculate my score (the tables can use A2+C2 type of workflow to calculate cells). Going even one nerdier step more, when writing up reports I prefer to do it in LaTeX. Which lets me grab the extra points by doing what I already was.
+
+** Email Management
+I just plain failed at this. Having installed [[https://github.com/pimalaya/himalaya][himalaya]] and running through the wizard, it couldn't connect to my email. Something something security something something not configured right. Who knows. I ran out of time to really play around with this so I have to give up and take the penalty.
+
+** Web Browsing
+Kind of an in between situation. Loading up [[https://lynx.invisible-island.net/][lynx]], I was able to get to Google and search for some basic sites, technically meeting the challenge criteria. But I couldn't stick with it for everyday use, so I figure the points cancel out and I'm left with a donut.
+
+** Music Playback
+Another asterisk category. I don't play music on my laptop and usually use my phone with headphones or speakers on the TV. I did get this working using [[https://github.com/dhonus/jellyfin-tui][jellyfin-tui]] to log into my instance on my server and stream from there, as well as using the command line version of VLC (cvlc) to stream jblive.fm. So while completing the challenge, this isn't something that I would've done otherwise and feel like I'm meeting the rules but not the spirit. As a consolation I did use cvlc to launch a video from the command line which I navigated using lf, better fitting my typical use case. And I'm thinking that the rules for graphical applications should be more like old DOS. Life was using the command line, but if you opened up a video or a graphical game it would take you to that specific application. To replicate this weaseling out of the rules, I tried to get steam-tui working. The thought being that if I used a tui version of steam and only messed with the graphics after the game was open it would be the same as if I was on DOS, inserted a floppy drive, manually opened it in the command line, only to then be able to play the game. Alas, either I couldn't figure it out, or Steam changed something to prevent it from pulling my games, I was unable to do this.
+
+** File Management
+One of the easier ones. Running a headless server means that I'm well acquainted with cp, mv, rm, and mv (to rename here instead of move, because old paradigms were weird). Trying something new I found [[https://github.com/gokcehan/lf][lf]]
+. Similar to Ranger in layout but written in Go it uses, largely, Vi keybindings which is always weird for me. Not only having sunk into the Emacs world, I also use the Dvorak keyboard layout. So the ease of the h,j,k,l placement is moot for me. Oddly enough, the typical Emacs keybindings are easier for me.
+
+** Task Management
+So my day to day life doesn't necessitate a dedicated task management system. I've used org-mode with Syncthing and orgly previously when I was experimenting with a task management workflow that, ultimately, wasn't needed. Meeting the requirements for this category, but really it should be a pass for me as it's not applicable right now. If that changes in the future I have a setup in place, from before, that I can easily go back to. But for now I don't need it (work is all in the corporate Windows world killing most of the fun I would have with this if I could).
+
+** System Monitoring
+I'm pretty basic here. If I'm wanting to know about what my system is up to I'll run htop or btm (for more pretties), but I don't need much here.
+
+** Terminal Multitasking
+The best thing to come from this challenge. I finally sat down and learned the basics of how to run [[tmux][tmux]]. Wanting to learn this previously, there wasn't much incentive. I typically only need to pull up the terminal for sporadic things and then I close it. And if I needed multiple cases or panes side by side I'd use Konsole, again no real incentive here to broaden myself. But now, living much more in the pure terminal world, tmux is a godsend. Using [[https://github.com/kovidgoyal/kitty][kitty]] as the base and running in fullscreen with tmux, it's as if my laptop has been transported to a different time. Granted, I'm only an M-tab away from KDE (and I do pop over when needed).
